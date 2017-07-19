@@ -1,6 +1,8 @@
 package com.iwaneez.jsf.bo;
 
 
+import com.iwaneez.jsf.enums.Country;
+
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
@@ -10,6 +12,7 @@ public class Student {
 
     private String firstName;
     private String lastName;
+    private Country country;
 
     public Student() {
     }
@@ -28,5 +31,13 @@ public class Student {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 }

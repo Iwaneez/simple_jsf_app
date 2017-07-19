@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:a="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
     <title>Hello World - Input Form</title>
@@ -15,6 +15,11 @@
         First name: <h:inputText value="#{student.firstName}"/>
         <br/><br/>
         Last name: <h:inputText value="#{student.lastName}"/>
+        <br/><br/>
+        <h:selectOneMenu value="#{student.country}">
+            <f:selectItems value="#{dataProvider.countries}" var="country" itemValue="#{country}"
+                           itemLabel="#{country.label}"/>
+        </h:selectOneMenu>
         <br/><br/>
         <h:commandButton value="Submit" action="response"/>
     </h:form>
